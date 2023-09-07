@@ -1,12 +1,20 @@
 import { FC } from 'react';
 
-import './style.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Login } from './account/login';
+import { Home } from './account/home';
 
-export const App: FC<{ name: string }> = ({ name }) => {
-  return (
-    <div>
-      <h1>Hello {name}!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+]);
+
+export const App = () => {
+  return <RouterProvider router={router} />;
 };
