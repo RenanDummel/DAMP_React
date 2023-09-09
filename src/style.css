@@ -1,4 +1,51 @@
-h1,
-p {
-  font-family: Lato;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&family=Oswald:wght@400;700&display=swap');
+
+body {
+  font-family: Oswald;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(222, 198, 246, 1) 100%
+  );
+}
+
+html,
+body {
+  font-family: Oswald;
+  min-height: 100%;
+}
+
+.box-login {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px -5px;
+  border: 1px solid white;
+}
+
+.box-login h1 {
+  margin: 1rem 0;
+}
+
+.box-login input {
+  width: 100%;
+}
+
+.box-login button {
+  display: block;
+  width: 100%;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  background: #dddddd;
+  border: none;
+}
+
+.box-login button[type='submit'] {
+  background: rgb(0, 100, 255);
+  color: white;
+}
+
+.box-login button[type='submit']:hover {
+  background: rgb(0, 174, 255);
 }
